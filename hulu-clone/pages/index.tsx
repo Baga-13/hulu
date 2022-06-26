@@ -30,10 +30,7 @@ const Home: NextPage = (props) => {
 
 export default Home;
 
-// export async function getServerSideProps(context) {
-export const getServerSideProps: GetServerSideProps<PageProps> = async (
-  context
-) => {
+export async function getServerSideProps(context) {
   const genre = context.query.genre;
 
   const request = await fetch(
